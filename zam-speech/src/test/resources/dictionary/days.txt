@@ -1,0 +1,7 @@
+Monday=MAH4NDEY
+Tuesday=TUW4ZDEY
+Wednesday=WEH4NZDEY
+Thursday=THER4ZDEY
+Friday=FRAY4DEY
+Saturday=SAE4TERDEY
+Sunday=SAH4NDEY

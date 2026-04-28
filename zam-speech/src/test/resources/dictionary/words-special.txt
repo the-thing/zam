@@ -1,0 +1,4 @@
+flow chart=FLOW4CHAART
+-ing=IHNX
+O.K.=OW4KEY
+S.A.M.=SAE4M
