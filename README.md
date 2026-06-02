@@ -6,7 +6,7 @@ Zam
 
 Zam is a text-to-speech (TTS) synthesis engine for Java. It is an actual re-implementation of the reverse-engineered C
 version of the classic **Software Automatic Mouth (SAM)**, based on the work
-at [discordier/sam](https://github.com/discordier/sam). It offers retro robotic speech synthesis out of the box in a
+at [s-macke/SAM](https://github.com/s-macke/SAM). It offers retro robotic speech synthesis out of the box in a
 modern Java environment.
 
 ## Features
@@ -76,7 +76,7 @@ public class ZamGenericExample {
 
 Zam is a Java reimplementation of the reverse-engineered C version
 of [Software Automatic Mouth (SAM)](https://en.wikipedia.org/wiki/Software_Automatic_Mouth),
-based on the work at [discordier/sam](https://github.com/discordier/sam).
+based on the work at [s-macke/SAM](https://github.com/s-macke/SAM).
 
 The original commercial software was published in 1982 by Don't Ask Software (later **SoftVoice, Inc.**,
 www.text2speech.com). The company has been unreachable and its website has not been updated since 2009.
