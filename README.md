@@ -1,7 +1,7 @@
 Zam
 ===
 
-[![Java CI](https://github.com/the-thing/zam/actions/workflows/maven.yml/badge.svg)](https://github.com/the-thing/zam/actions/workflows/ci.yml)
+[![Java CI](https://github.com/the-thing/zam/actions/workflows/ci.yml/badge.svg)](https://github.com/the-thing/zam/actions/workflows/ci.yml)
 
 Zam is a text-to-speech (TTS) synthesis engine for Java. It is an actual re-implementation of the reverse-engineered C
 version of the classic **Software Automatic Mouth (SAM)**, based on the work
