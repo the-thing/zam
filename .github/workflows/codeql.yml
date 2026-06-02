@@ -34,7 +34,7 @@ jobs:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
     - name: Run manual build steps
-      run: mvn clean package -B
+      run: mvn -B clean package
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4
       with:
