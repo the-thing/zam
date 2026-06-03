@@ -144,4 +144,11 @@
             </plugins>
         </pluginManagement>
     </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/the-thing/zam</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
