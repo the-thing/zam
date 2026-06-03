@@ -7,7 +7,7 @@ permissions:
   packages: write
 
 jobs:
-  release-snapshot:
+  release-github:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
