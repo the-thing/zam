@@ -27,6 +27,12 @@
         <maven.jar.plugin.version>3.5.0</maven.jar.plugin.version>
         <maven.assembly.plugin.version>3.8.0</maven.assembly.plugin.version>
     </properties>
+    <scm>
+        <connection>scm:git:git://github.com/the-thing/zam.git</connection>
+        <developerConnection>scm:git:git@github.com:the-thing/zam.git</developerConnection>
+        <url>https://github.com/the-thing/zam</url>
+        <tag>main</tag>
+    </scm>
     <dependencyManagement>
         <dependencies>
             <dependency>
