@@ -20,6 +20,7 @@
         <junit.version>5.9.2</junit.version>
         <mockito.version>5.15.2</mockito.version>
         <assert4j.version>3.27.7</assert4j.version>
+        <jacoco.plugin.version>0.8.14</jacoco.plugin.version>
         <maven.compiler.plugin.version>3.15.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.5.5</maven.surefire.plugin.version>
         <maven.resources.plugin.version>3.5.0</maven.resources.plugin.version>
@@ -71,8 +72,39 @@
         </dependencies>
     </dependencyManagement>
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.plugin.version}</version>
+                    <configuration>
+                        <excludes>
+                            <exclude>com/github/thething/zam/demo/**</exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -86,7 +118,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven.surefire.plugin.version}</version>
                     <configuration>
-                        <argLine>-Dfile.encoding=${project.build.sourceEncoding}</argLine>
+                        <argLine>@{argLine} -Dfile.encoding=${project.build.sourceEncoding}</argLine>
                     </configuration>
                 </plugin>
                 <plugin>
