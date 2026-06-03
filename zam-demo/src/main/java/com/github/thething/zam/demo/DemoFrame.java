@@ -395,7 +395,14 @@ public final class DemoFrame extends JFrame {
     }
 
     private void saveWaveform(File destination) {
-        byte[] audio = speechSynthesizer.generateAudio(plainTextArea.getText(), speed, pitch, mouth, throat, false);
+        byte[] audio;
+
+        try {
+            audio = speechSynthesizer.generateAudio(plainTextArea.getText(), speed, pitch, mouth, throat, false);
+        } catch (RuntimeException e) {
+            JOptionPane.showMessageDialog(this, "Failed to generate audio: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
         try (ByteArrayInputStream bais = new ByteArrayInputStream(audio);
              AudioInputStream audioStream = new AudioInputStream(bais, SpeechSynthesizer.AUDIO_FORMAT, audio.length / SpeechSynthesizer.AUDIO_FORMAT.getFrameSize())) {
