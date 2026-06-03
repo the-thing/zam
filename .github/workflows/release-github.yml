@@ -1,4 +1,7 @@
-name: Java Release
+name: Java GitHub Release
+
+on:
+  workflow_dispatch:
 
 permissions:
   packages: write
