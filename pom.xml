@@ -151,10 +151,10 @@
         </pluginManagement>
     </build>
     <distributionManagement>
-        <snapshotRepository>
+        <repository>
             <id>github</id>
             <name>GitHub Packages</name>
             <url>https://maven.pkg.github.com/the-thing/zam</url>
-        </snapshotRepository>
+        </repository>
     </distributionManagement>
 </project>
