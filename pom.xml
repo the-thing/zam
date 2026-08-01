@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
         <miglayout.version>11.4.3</miglayout.version>
-        <flatlaf.version>3.7.1</flatlaf.version>
+        <flatlaf.version>3.7.2</flatlaf.version>
         <junit.version>6.1.1</junit.version>
         <assert4j.version>3.27.7</assert4j.version>
         <jacoco.plugin.version>0.8.15</jacoco.plugin.version>
