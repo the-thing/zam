@@ -29,7 +29,7 @@ modern Java environment.
 
 ## Requirements
 
-* **Java 17** or higher
+* **Java 21** or higher
 * **Maven** (for building)
 
 ## Usage

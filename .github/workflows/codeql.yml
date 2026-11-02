@@ -22,16 +22,23 @@ jobs:
         - language: actions
           build-mode: none
         - language: java-kotlin
-          build-mode: none
+          build-mode: manual
     steps:
     - name: Checkout repository
       uses: actions/checkout@v7
+    - name: Set up Java 21
+      if: matrix.language == 'java-kotlin'
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '21'
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v4.39.1
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
     - name: Run manual build steps
+      if: matrix.build-mode == 'manual'
       run: mvn -B clean package
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4.39.1
